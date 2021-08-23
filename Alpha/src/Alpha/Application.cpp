@@ -14,7 +14,7 @@ namespace Alpha
     {
         while (true)
         {
-            std::cout << "Hello from Alpha!!!" << std::endl;
+            // std::cout << "Hello from Alpha!!!" << std::endl;
         }
     }
 } // namespace Alpha

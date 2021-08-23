@@ -3,7 +3,7 @@ project(alpha VERSION 0.1.0)
 
 
 include(GNUInstallDirs)
-
+# SPDLOG_DIR=
 
 if(MSVC)
     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
@@ -14,9 +14,12 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(CMAKE_C_EXTENSIONS OFF)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-
+include_directories(alpha 
+    PRIVATE ${CMAKE_SOURCE_DIR}\\Alpha\\vendor\\spdlog\\include
+)
 add_library(alpha SHARED 
     src/Alpha/Application.cpp
+    src/Alpha/Log.cpp
 )
 target_compile_definitions(alpha PRIVATE "EXPORTING_Alpha")
 

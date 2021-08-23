@@ -16,7 +16,9 @@ set(ALPHA_DIR "D:\\PhD\\Research\\ProjectCpp\\TutOpenGL\\Engine\\Alpha")
 
 include_directories(alpha 
     PRIVATE ${ALPHA_DIR}\\src
+    PRIVATE ${CMAKE_SOURCE_DIR}\\Alpha\\vendor\\spdlog\\include
 )
+
 # add_library(alpha SHARED IMPORTED)
 # set_property(TARGET alpha PROPERTY IMPORTED_LOCATION ${ALPHA_DIR}\\build\\libalpha.dll)
 # set_property(TARGET alpha PROPERTY IMPORTED_IMPLIB ${ALPHA_DIR}\\build\\libalpha.dll.a)
