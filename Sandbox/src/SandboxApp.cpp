@@ -14,5 +14,6 @@ public:
 
 Alpha::Application *Alpha::CreateApplication()
 {
+
     return new Sandbox();
 }
