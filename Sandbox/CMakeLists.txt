@@ -2,22 +2,24 @@ cmake_minimum_required(VERSION 3.0.0)
 project(sandbox VERSION 0.1.0)
 include(GNUInstallDirs)
 
-if(MSVC)
-    set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
-    set(BUILD_SHARED_LIBS TRUE)
-    set(CMAKE_DEBUG_POSTFIX "d")
-endif()
-set(CMAKE_POSITION_INDEPENDENT_CODE ON)
-set(CMAKE_C_EXTENSIONS OFF)
-set(CMAKE_CXX_EXTENSIONS OFF)
+# if(MSVC)
+#     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
+#     set(BUILD_SHARED_LIBS TRUE)
+#     set(CMAKE_DEBUG_POSTFIX "d")
+# endif()
+# set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+# set(CMAKE_C_EXTENSIONS OFF)
+# set(CMAKE_CXX_EXTENSIONS OFF)
+
+
 set(ALPHA_DIR "D:\\PhD\\Research\\ProjectCpp\\TutOpenGL\\Engine\\Alpha")
 
 include_directories(alpha 
     PRIVATE ${ALPHA_DIR}\\src
 )
-add_library(alpha SHARED IMPORTED)
-set_property(TARGET alpha PROPERTY IMPORTED_LOCATION ${ALPHA_DIR}\\build\\libalpha.dll)
-set_property(TARGET alpha PROPERTY IMPORTED_IMPLIB ${ALPHA_DIR}\\build\\libalpha.dll.a)
+# add_library(alpha SHARED IMPORTED)
+# set_property(TARGET alpha PROPERTY IMPORTED_LOCATION ${ALPHA_DIR}\\build\\libalpha.dll)
+# set_property(TARGET alpha PROPERTY IMPORTED_IMPLIB ${ALPHA_DIR}\\build\\libalpha.dll.a)
 
 # include(D:\\PhD\\Research\\ProjectCpp\\TutOpenGL\\EngineTut\\Adder\\build\\CMakeFiles\\Export\\lib\\adder\\adder-targets.cmake)  # if installed
 
@@ -27,6 +29,6 @@ add_executable(sandbox
 target_link_libraries(sandbox alpha)
 
 message(STATUS ${CMAKE_BINARY_DIR})
-configure_file(${ALPHA_DIR}\\build\\libalpha.dll ${CMAKE_BINARY_DIR}\\libalpha.dll COPYONLY)
+# configure_file(${ALPHA_DIR}\\build\\libalpha.dll ${CMAKE_BINARY_DIR}\\libalpha.dll COPYONLY)
 
 # file(COPY ${ADDER_DIR}\\libadder.dll DESTINATION ${EXECUTABLE_OUTPUT_PATH})
