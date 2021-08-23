@@ -1,5 +1,17 @@
 {
+    "cmake.cmakePath": "C:\\msys64\\mingw64\\bin\\cmake.exe",
+    "cmake.mingwSearchDirs": [
+      "C:\\msys64\\mingw64\\bin"
+   ],
+   "cmake.generator": "MinGW Makefiles",
+   "cmake.configureSettings": {
+      "CMAKE_TOOLCHAIN_FILE": "D:\\src\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake",
+      "VCPKG_TARGET_TRIPLET": "x64-mingw-dynamic",
+      "CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS": "TRUE",
+      "DBUILD_SHARED_LIBS" :"TRUE"
+    },
     "files.associations": {
+        "memory": "cpp",
         "algorithm": "cpp",
         "array": "cpp",
         "atomic": "cpp",
@@ -33,7 +45,6 @@
         "list": "cpp",
         "locale": "cpp",
         "map": "cpp",
-        "memory": "cpp",
         "mutex": "cpp",
         "new": "cpp",
         "optional": "cpp",
