@@ -21,11 +21,11 @@ namespace Alpha
             s_CoreLogger->set_level(spdlog::level::trace);
             s_ClientLogger = spdlog::stdout_color_mt("App");
             s_ClientLogger->set_level(spdlog::level::trace);
-            spdlog::error("WELCOME?");
+            spdlog::info("WELCOME TO ALPHA");
         }
         catch (const std::exception &e)
         {
-            spdlog::info("Welcome to spdlog!");
+            spdlog::error("Catched... Failed to connect to API!");
             std::cout << e.what() << "\n";
         }
     }
