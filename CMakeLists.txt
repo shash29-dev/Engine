@@ -4,4 +4,4 @@ include(GNUInstallDirs)
 add_subdirectory(Alpha)
 add_subdirectory(Sandbox)
 
-message(STATUS ${CMAKE_SOURCE_DIR})
+message(STATUS "This is ${CMAKE_SOURCE_DIR}")

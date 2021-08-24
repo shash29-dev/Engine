@@ -31,6 +31,11 @@ add_executable(sandbox
 target_link_libraries(sandbox alpha)
 
 message(STATUS ${CMAKE_BINARY_DIR})
+add_custom_command(TARGET sandbox POST_BUILD 
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+    "${CMAKE_BINARY_DIR}\\Alpha\\libalpha.dll"
+    $<TARGET_FILE_DIR:sandbox>    
+)
 # configure_file(${ALPHA_DIR}\\build\\libalpha.dll ${CMAKE_BINARY_DIR}\\libalpha.dll COPYONLY)
 
 # file(COPY ${ADDER_DIR}\\libadder.dll DESTINATION ${EXECUTABLE_OUTPUT_PATH})
