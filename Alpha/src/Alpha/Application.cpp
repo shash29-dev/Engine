@@ -1,5 +1,7 @@
 #include "Application.h"
-#include <iostream>
+#include "Alpha/Event/ApplicationEvent.h"
+#include "Alpha/Log.h"
+
 namespace Alpha
 {
     Application::Application()
@@ -12,9 +14,12 @@ namespace Alpha
 
     void Application::Run()
     {
+        WindowResizeEvent e(1280, 720);
+
+        AL_TRACE(e);
         while (true)
         {
-            // std::cout << "Hello from Alpha!!!" << std::endl;
+            /* code */
         }
     }
 } // namespace Alpha

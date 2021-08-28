@@ -1,6 +1,7 @@
 #pragma once
 #include "Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 namespace Alpha
 {
     class DECLSPEC Log
@@ -26,8 +27,8 @@ namespace Alpha
 #define AL_CORE_TRACE(...) ::Alpha::Log::GetCoreLogger()->trace(__VA_ARGS__)
 #define AL_CORE_FATAL(...) ::Alpha::Log::GetCoreLogger()->fatal(__VA_ARGS__)
 
-#define AL_CLIENT_ERROR(...) ::Alpha::Log::GetClientLogger()->error(__VA_ARGS__)
-#define AL_CLIENT_WARN(...) ::Alpha::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define AL_CLIENT_INFO(...) ::Alpha::Log::GetClientLogger()->info(__VA_ARGS__)
-#define AL_CLIENT_TRACE(...) ::Alpha::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define AL_CLIENT_FATAL(...) ::Alpha::Log::GetClientLogger()->fatal(__VA_ARGS__)
+#define AL_ERROR(...) ::Alpha::Log::GetClientLogger()->error(__VA_ARGS__)
+#define AL_WARN(...) ::Alpha::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define AL_INFO(...) ::Alpha::Log::GetClientLogger()->info(__VA_ARGS__)
+#define AL_TRACE(...) ::Alpha::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define AL_FATAL(...) ::Alpha::Log::GetClientLogger()->fatal(__VA_ARGS__)
