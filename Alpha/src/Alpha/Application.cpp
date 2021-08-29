@@ -6,6 +6,7 @@ namespace Alpha
 {
     Application::Application()
     {
+        m_Window = std::unique_ptr<Window>(Window::Create());
     }
 
     Application::~Application()
@@ -14,12 +15,10 @@ namespace Alpha
 
     void Application::Run()
     {
-        WindowResizeEvent e(1280, 720);
 
-        AL_TRACE(e);
-        while (true)
+        while (m_Running)
         {
-            /* code */
+            m_Window->OnUpdate();
         }
     }
 } // namespace Alpha
