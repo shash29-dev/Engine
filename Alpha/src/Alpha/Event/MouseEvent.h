@@ -34,7 +34,7 @@ namespace Alpha
         std::string ToString() const override
         {
             std::stringstream ss;
-            ss << "MouseMovedEvent: " << m_XOffset << ", " << m_YOffset;
+            ss << "MouseScrolledEvent: " << m_XOffset << ", " << m_YOffset;
             return ss.str();
         }
         EVENT_CLASS_TYPE(MouseScrolled)
