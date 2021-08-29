@@ -27,6 +27,8 @@ add_library(alpha SHARED
     src/Alpha/Application.cpp
     src/Alpha/Log.cpp
     src/platform/windows/WindowsWindow.cpp
+    src/Alpha/LayerStack.cpp
+    src/Alpha/Layer.cpp
     # src/Alpha/Event/MouseEvent.h
     # src/Alpha/Event/Event.h
     # src/Alpha/Event/KeyEvent.h

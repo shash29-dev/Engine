@@ -4,3 +4,4 @@
 
 #include "Alpha/Log.h"
 #include "Alpha/EntryPoint.h"
+#include "Alpha/Layer.h"
