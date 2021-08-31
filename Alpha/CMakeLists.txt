@@ -31,11 +31,11 @@ add_library(alpha SHARED
     src/Alpha/Application.cpp
     src/Alpha/Log.cpp
     src/platform/windows/WindowsWindow.cpp
+    src/platform/windows/WindowsInput.cpp
     src/Alpha/LayerStack.cpp
     src/Alpha/Layer.cpp
     src/Alpha/ImGui/ImGuiLayer.cpp
     src/platform/OpenGL/ImGuiOpenGLRenderer.cpp
-    src/platform/OpenGL/ImGuiOpenGLRenderer.h
     # src/Alpha/Event/MouseEvent.h
     # src/Alpha/Event/Event.h
     # src/Alpha/Event/KeyEvent.h
@@ -52,6 +52,9 @@ target_compile_definitions(alpha
                     PRIVATE "EXPORTING_Alpha"
                     PUBLIC GLFW_INCLUDE_NONE 
                     # PUBLIC IMGUI_DISABLE_WIN32_DEFAULT_IME_FUNCTIONS
+                    )
+target_compile_features(alpha 
+                    PRIVATE cxx_std_17
                     )
 
 

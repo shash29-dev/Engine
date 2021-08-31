@@ -1,6 +1,7 @@
 #include "Application.h"
 #include "Alpha/Log.h"
 #include "Input.h"
+#include <glad/glad.h>
 namespace Alpha
 {
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
@@ -54,8 +55,12 @@ namespace Alpha
 
         while (m_Running)
         {
+            glClear(GL_COLOR_BUFFER_BIT);
             for (Layer *layer : m_LayerStack)
                 layer->OnUpdate();
+
+            auto [x, y] = Input::GetMousePosition();
+            AL_CORE_TRACE("{0} ,{1}", x, y);
             m_Window->OnUpdate();
         }
     }
