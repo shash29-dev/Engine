@@ -6,12 +6,14 @@ public:
     ExampleLayer() : Layer("Example") {}
     void OnUpdate() override
     {
-        AL_INFO("ExampleLayer::Update");
+        // AL_INFO("ExampleLayer::Update");
+        if (Alpha::Input::IsKeyPressed(AL_KEY_TAB))
+            AL_TRACE("Tab Key pressed!");
     }
 
     void OnEvent(Alpha::Event &event) override
     {
-        AL_TRACE("{0}", event);
+        // AL_TRACE("{0}", event);
     }
 };
 
