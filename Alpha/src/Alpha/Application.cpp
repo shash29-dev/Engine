@@ -1,6 +1,6 @@
 #include "Application.h"
 #include "Alpha/Log.h"
-
+#include "Input.h"
 namespace Alpha
 {
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
