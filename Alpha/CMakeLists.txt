@@ -16,7 +16,8 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 find_package(glfw3 CONFIG REQUIRED)
 find_package(glad CONFIG REQUIRED)
 find_package(imgui CONFIG REQUIRED)
-
+find_package(glm CONFIG REQUIRED)
+    
 file(GLOB_RECURSE SRC 
     ${CMAKE_SOURCE_DIR}/Alpha/src/*.h 
     ${CMAKE_SOURCE_DIR}/Alpha/src/*.cpp
@@ -46,6 +47,7 @@ target_link_libraries(alpha
                     PRIVATE glfw
                     PRIVATE glad::glad
                     PRIVATE imgui::imgui
+                    PRIVATE glm::glm
                     PRIVATE libimm32.a
                     )
 target_compile_definitions(alpha 

@@ -11,6 +11,7 @@ include(GNUInstallDirs)
 # set(CMAKE_C_EXTENSIONS OFF)
 # set(CMAKE_CXX_EXTENSIONS OFF)
 
+find_package(glm CONFIG REQUIRED)
 
 set(ALPHA_DIR "D:\\PhD\\Research\\ProjectCpp\\TutOpenGL\\Engine\\Alpha")
 
@@ -28,7 +29,9 @@ include_directories(alpha
 add_executable(sandbox 
     src/SandboxApp.cpp
 )
-target_link_libraries(sandbox alpha)
+target_link_libraries(sandbox PUBLIC alpha
+                    PRIVATE glm::glm 
+                    )
 
 
 message(STATUS ${CMAKE_BINARY_DIR})
